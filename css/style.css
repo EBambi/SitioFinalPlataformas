@@ -51,10 +51,12 @@ body{
 .navbar-brand {
     float: left;
 	margin-left: 0.8em;
+    position: fixed;
 }
 .navbar-nav {
     float: right;
-    margin: 0;
+    margin-left: 45%;
+    position: fixed;
 }
 .top-menu ul li {
     display: inline-block;
