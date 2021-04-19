@@ -44,19 +44,18 @@ body{
 	margin:0 0; 
 	font-family: 'OpenSans-Regular'
 }
+
 .header-top {
-    padding: 2em 0;
 	background-color: #fff;
+    position:fixed;
+    margin-top: 20px;
 }
 .navbar-brand {
     float: left;
-	margin-left: 0.8em;
-    position: fixed;
 }
 .navbar-nav {
     float: right;
-    margin-left: 45%;
-    position: fixed;
+    margin-left: 598px;
 }
 .top-menu ul li {
     display: inline-block;
