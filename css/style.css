@@ -48,7 +48,6 @@ body{
 .header-top {
 	background-color: #fff;
     position:fixed;
-    margin-top: 20px;
 }
 .navbar-brand {
     float: left;
