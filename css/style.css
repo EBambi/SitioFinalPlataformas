@@ -496,7 +496,7 @@ span.glyphicon.glyphicon-user:hover {
   color: #ff9541;
 }
 .ourteam {
-  padding: 0 0 4em;
+  padding: 0 0 0em;
 }
 .history h5,.history1 h5,.history2 h5,.history3 h5 {
   font-size: 1.1em;
@@ -528,6 +528,9 @@ span.glyphicon.glyphicon-user:hover {
  }
 .team-grids {
   margin-top: 3em;
+  margin-bottom: 3em;
+  margin-left: 24%;
+  width: 315mm;
 }
 .advantages {
   text-align: center;
