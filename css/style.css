@@ -420,7 +420,7 @@ span.glyphicon.glyphicon-user:hover {
 	font-size: 1em;
 	color:#fff;
 	font-weight: 400;
-	text-transform: capitalize;
+	/*text-transform: capitalize;*/
 }
 .footer-top a:hover {
 	color: #1B1B1B;
