@@ -117,7 +117,7 @@ body{
     background-color: #fff;
 }
 .header-banner {
-    background: url(../images/banner.jpg) no-repeat 0px 0px;
+    background:#000 no-repeat 0px 0px;
     background-size: cover;
     min-height: 712px;
 	text-align: center;
@@ -436,7 +436,7 @@ span.glyphicon.glyphicon-user:hover {
 }
 /*--about--*/
 .banner-header {
-  background: url("../images/banner1.jpg")no-repeat 0px 0px;
+  background:#000 0px 0px;
   background-size: cover;
   min-height: 140px;
   text-align:center;
