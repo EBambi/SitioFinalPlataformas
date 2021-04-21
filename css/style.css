@@ -12,6 +12,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     font-family: 'OpenSans-Regular';
     src:url(../fonts/OpenSans-Regular.ttf) format('truetype');
 }
+
+#boton_wpp{
+    position:fixed;
+    bottom:5px;
+    right:5px;
+    cursor:pointer;
+}
 body a{
     transition:0.5s all;
 	-webkit-transition:0.5s all;
