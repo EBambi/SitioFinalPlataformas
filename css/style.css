@@ -16,8 +16,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 #boton_wpp{
     position:fixed;
     bottom:5px;
-    right:5px;
+    right:2px;
     cursor:pointer;
+}
+
+#boton_flecha{
+    position: fixed;
+    right: 2px;
+    bottom: 72px;
+}
+.ocultar_flecha{
+    display:none;
 }
 body a{
     transition:0.5s all;
