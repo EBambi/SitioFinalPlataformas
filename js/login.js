@@ -1,12 +1,13 @@
 //JAVASCRIPT PARA REGISTRO
 var usuario_logueado = false;
+var valido;
 window.onload = validacion
 
 
 //funcion para validar que los campos esten completos
 var validacion = () => {
     var valores = [];
-    var valido = true;
+    valido = true;
     //agrego datos del usuario en un array
     valores.push(document.getElementById("nombre").value);
     valores.push(document.getElementById("usuario").value);
@@ -59,7 +60,7 @@ var logueo =() =>{
     }
     else{
         
-        if(usuario == datos.usuario && password == datos.password){
+        if(usuario == datos.usuario && password == datos.password && valido==true && usuario!="" && password!=""){
             alert('Ingreso exitoso');
             window.location.href="contact.html";
             usuario_logueado = true;
