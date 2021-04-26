@@ -460,7 +460,7 @@ span.glyphicon.glyphicon-user:hover {
 }
 .banner-header h2 {
  font-size: 3em;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     font-family: 'FugazOne-Regular';
     color: #fff;
   
