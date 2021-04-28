@@ -1,8 +1,8 @@
 //JAVASCRIPT PARA REGISTRO
 var usuario_logueado = false;
 var valido;
-window.onload = validacion
 
+window.onload = validacion
 
 //funcion para validar que los campos esten completos
 var validacion = () => {
@@ -29,44 +29,53 @@ var validacion = () => {
 var registro = () => {
     var nombre = document.getElementById("nombre").value; //obtengo los valores del los campos del form
     var usuario = document.getElementById("usuario").value;
-    var password = document.getElementById("password").value;
     var formulario = document.getElementById("formulario");
 
-    //creo un objeto usuario
-    var datosUsuario = {
-        nombre: nombre,
-        usuario: usuario,
-        password: password
-    };
+    fetch('scripts/script.php',{
+        method:'post',
+        body:new FormData(formulario)
+        }).then(function(response) {
+            return response.json();
+        }).then(function(json) {
+            localStorage.setItem(usuario, JSON.stringify(json));
+			formulario.reset(); //blanquea los campos del form
+			alert('Registro exitoso. Bienvenido '+usuario);
+        }).catch(function(err){
 
-
-    //agrego los datos del usuario al localStorage
-    localStorage.setItem(datosUsuario.usuario, JSON.stringify(datosUsuario));
-    console.log(datosUsuario)
-    formulario.reset(); //blanquea los campos del form
-    alert('Registro exitoso. Bienvenido '+datosUsuario.usuario);
+        });
 }
 
 window.onload = logueo
-
 var logueo =() =>{
+	
     var usuario = document.getElementById("usuarioL").value;
-    var password = document.getElementById("passwordL").value;
-    var datos = JSON.parse(localStorage.getItem(usuario));
-
-    console.log(datos);
-    if (datos === null){
+	var psw = document.getElementById("passwordL").value;
+	var formulario = document.getElementById("formularioL");
+	let datos = localStorage.getItem(usuario);
+	
+	if (datos === null){
         alert("El usuario solicitado no estÃ¡ registrado");
     }
-    else{
-        
-        if(usuario == datos.usuario && password == datos.password && valido==true && usuario!="" && password!=""){
-            alert('Ingreso exitoso');
-            window.location.href="contact.html";
-            usuario_logueado = true;
-        }
-        else {
-            alert('Los datos ingresados son incorrectos');
-        }
-    }
+	else{
+		if(datos){
+            fetch('scripts/script.php',{
+            method:'post',
+            body:new FormData(formulario)
+            }).then(function(response) {
+                return response.json();
+            }).then(function(json) {
+                let dUsuario = JSON.parse(localStorage.getItem(usuario));
+                if(dUsuario.password == json.password && valido==true && usuario!="" && psw!=""){
+                    alert("Ingreso exitoso");
+                    window.location.href = "contact.html"
+                    usuario_logueado = true;
+                }
+                else{
+                    alert('Los datos ingresados son incorrectos');
+                }
+            }).catch(function(err){
+
+            });
+	    }
+	}
 }
