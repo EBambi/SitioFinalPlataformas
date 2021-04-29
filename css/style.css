@@ -828,6 +828,20 @@ img.zoom-img:hover {
 .banner-header {
     min-height: 130px;
 }
+.head-banner h3 {
+    margin-top: 5px;
+}
+.header-top{
+    position: relative;
+}
+.navbar-brand h1{
+    margin-top: 5px;
+    position: absolute;
+}
+.navbar-header .navbar-toggle collapse{
+    margin-left: 50%;
+    position: absolute;
+}
 }
 @media (max-width: 1366px){
 .header-banner {
@@ -1210,7 +1224,8 @@ img.zoom-img:hover {
 }
 .team-grid {
     float: left;
-    width: 50%;
+    height: 120px;
+    width: 120px;
 }
 .team-grid:nth-child(3) {
     margin-top: 1em;
